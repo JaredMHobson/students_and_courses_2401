@@ -39,4 +39,13 @@ RSpec.describe Course do
       expect(course.full?).to be true
     end
   end
+
+  describe '#enroll' do
+    it 'can enroll students and push them to the students array' do
+      course.enroll(student1)
+      course.enroll(student2)
+
+      expect(course.students).to eq([student1, student2])
+    end
+  end
 end
