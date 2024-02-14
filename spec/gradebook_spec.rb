@@ -3,3 +3,14 @@ require './lib/gradebook'
 require './lib/student'
 require './lib/course'
 
+RSpec.describe Gradebook do
+  let (:course1) { Course.new('Calculus', 2) }
+  let (:course2) { Course.new('Programming', 2) }
+  let (:student1) { Student.new({name: "Morgan", age: 21}) }
+  let (:student2) { Student.new({name: "Jordan", age: 29}) }
+  let (:book) { Gradebook.new('Kat') }
+
+  it 'exists' do
+    expect(book).to be_instance_of(Gradebook)
+  end
+end
