@@ -13,4 +13,10 @@ RSpec.describe Gradebook do
   it 'exists' do
     expect(book).to be_instance_of(Gradebook)
   end
+
+  describe '#courses' do
+    it 'has no courses by default' do
+      expect(book.courses).to eq([])
+    end
+  end
 end
