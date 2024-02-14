@@ -14,6 +14,12 @@ RSpec.describe Gradebook do
     expect(book).to be_instance_of(Gradebook)
   end
 
+  describe '#instructor' do
+    it 'has an instructor' do
+      expect(book.instructor).to eq('Kat')
+    end
+  end
+
   describe '#courses' do
     it 'has no courses by default' do
       expect(book.courses).to eq([])
