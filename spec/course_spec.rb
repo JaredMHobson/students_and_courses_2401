@@ -20,4 +20,10 @@ RSpec.describe Course do
       expect(course.capacity).to eq(2)
     end
   end
+
+  describe '#students' do
+    it 'has no students by default' do
+      expect(course.students).to eq([])
+    end
+  end
 end
