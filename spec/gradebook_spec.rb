@@ -25,4 +25,13 @@ RSpec.describe Gradebook do
       expect(book.courses).to eq([])
     end
   end
+
+  describe '#add_course' do
+    it 'can push courses to the courses array' do
+      book.add_course(course1)
+      book.add_course(course2)
+
+      expect(book.courses).to eq([course1, course2])
+    end
+  end
 end
