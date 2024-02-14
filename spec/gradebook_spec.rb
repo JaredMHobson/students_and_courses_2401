@@ -69,9 +69,9 @@ RSpec.describe Gradebook do
       expect(student2.grade).to eq(12.5)
       expect(student3.grade).to eq(55.0)
 
-      expect(students_below(50)).to eq([student2])
+      expect(book.students_below(50)).to eq([student2])
 
-      expect(students_below(95)).to eq([student2, student3])
+      expect(book.students_below(95)).to eq([student2, student3])
     end
   end
 end
