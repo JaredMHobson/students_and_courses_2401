@@ -14,4 +14,10 @@ RSpec.describe Course do
       expect(course.name).to eq('Calculus')
     end
   end
+
+  describe '#capcity' do
+    it 'has a capacity' do
+      expect(course.capacity).to eq(2)
+    end
+  end
 end
