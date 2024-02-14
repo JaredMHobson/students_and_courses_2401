@@ -13,4 +13,11 @@ RSpec.describe Student do
       expect(morgan.name).to eq('Morgan')
     end
   end
+
+  describe '#age' do
+    it 'has an age' do
+      morgan = Student.new({name: "Morgan", age: 21})
+      expect(morgan.age).to eq(21)
+    end
+  end
 end
