@@ -17,4 +17,14 @@ class Gradebook
     end
     all_students
   end
+
+  def students_below(threshold)
+    all_students = []
+    list_all_students.each do |course, students|
+      all_students << students
+    end
+    all_students.flatten.select do |student|
+      student.grade < threshold
+    end
+  end
 end
